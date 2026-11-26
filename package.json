@@ -1,11 +1,11 @@
 {
-  "name": "bababab",
+  "name": "bababab-website",
   "version": "1.0.0",
-  "description": "My awesome website",
+  "description": "A modern web tutorial website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "EnyuTu",
+  "license": "MIT"
 }
