@@ -20,7 +20,7 @@
 
   <section class="card">
     <div class="slide-top">
-      <span class="badge" id="indexLabel">1 / 4</span>
+      <span class="badge" id="indexLabel">1 / 7</span>
       <div class="progress-track" id="progressTrack">
         <div class="progress-bar" id="progressBar"></div>
       </div>
@@ -87,10 +87,13 @@ const CONTENT = {
       counter: (n, max) => `${n} / ${max}`
     },
     slides: [
-      { title: 'Step 1: Meet HTML', desc: ['HTML defines structure.'] },
-      { title: 'Step 2: Write CSS', desc: ['CSS controls the look.'] },
-      { title: 'Step 3: Add JS', desc: ['JS drives behavior.'] },
-      { title: 'Step 4: Deploy', desc: ['Put it on a server.'] }
+      { title: 'Step 1: Meet HTML', desc: ['HTML defines the structure. It is the skeleton of every webpage.'] },
+      { title: 'Step 2: Write CSS', desc: ['CSS controls the look. It adds colors, fonts, and layout to the structure.'] },
+      { title: 'Step 3: Add JavaScript', desc: ['JS drives behavior. It makes pages interactive and dynamic.'] },
+      { title: 'Step 4: Frontend Frameworks', desc: ['When UIs get complex, frameworks like React or Vue help manage state and components efficiently.'] },
+      { title: 'Step 5: Backend & APIs', desc: ['Websites need data. Backends like Node.js and Express handle logic and return JSON data.'] },
+      { title: 'Step 6: Full-stack Frameworks', desc: ['Next.js blends frontend and backend together, handling routing and server-side rendering out of the box.'] },
+      { title: 'Step 7: Deploy', desc: ['Host your site on the cloud (like Render or Vercel) to let the whole world access it.'] }
     ]
   },
   zh: {
@@ -108,10 +111,13 @@ const CONTENT = {
       counter: (n, max) => `${n} / ${max}`
     },
     slides: [
-      { title: '第一步：认识 HTML', desc: ['HTML 负责网页的结构。'] },
-      { title: '第二步：写 CSS', desc: ['CSS 负责网页的长相。'] },
-      { title: '第三步：加 JavaScript', desc: ['JS 负责网页的行为。'] },
-      { title: '第四步：部署上线', desc: ['放到服务器让别人访问。'] }
+      { title: '第一步：认识 HTML', desc: ['HTML 定义了网页的骨架。'] },
+      { title: '第二步：写 CSS', desc: ['CSS 负责长相，为骨架添加颜色、字体和布局。'] },
+      { title: '第三步：加 JavaScript', desc: ['JS 负责行为，让页面动起来，响应用户操作。'] },
+      { title: '第四步：前端框架', desc: ['当页面复杂时，React 或 Vue 等前端框架能帮你更好地管理状态和组件。'] },
+      { title: '第五步：后端与接口', desc: ['网页需要数据。Node.js 等后端负责处理逻辑并返回 JSON 接口。'] },
+      { title: '第六步：全栈框架', desc: ['像 Next.js 这样的全栈框架把前后端融合，开箱即用地处理路由和服务端渲染。'] },
+      { title: '第七步：部署上线', desc: ['把代码托管到云端（如 Render 或 Vercel），让全世界都能访问。'] }
     ]
   },
   ja: {
@@ -129,22 +135,27 @@ const CONTENT = {
       counter: (n, max) => `${n} / ${max}`
     },
     slides: [
-      { title: 'ステップ1：HTML', desc: ['HTMLは構造を担当します。'] },
-      { title: 'ステップ2：CSS', desc: ['CSSは見た目を担当します。'] },
-      { title: 'ステップ3：JavaScript', desc: ['JSは動きを担当します。'] },
-      { title: 'ステップ4：デプロイ', desc: ['サーバーに公開します。'] }
+      { title: 'ステップ1：HTML', desc: ['HTMLはウェブページの骨格を定義します。'] },
+      { title: 'ステップ2：CSS', desc: ['CSSは見た目を担当し、色やフォント、レイアウトを設定します。'] },
+      { title: 'ステップ3：JavaScript', desc: ['JSは動きを担当し、ページをインタラクティブにします。'] },
+      { title: 'ステップ4：フロントエンドフレームワーク', desc: ['UIが複雑になると、ReactやVueが状態とコンポーネントの管理を助けます。'] },
+      { title: 'ステップ5：バックエンドとAPI', desc: ['Webサイトにはデータが必要です。Node.jsなどがロジックを処理し、JSONを返します。'] },
+      { title: 'ステップ6：フルスタックフレームワーク', desc: ['Next.jsはフロントとバックを統合し、ルーティングとSSRを提供します。'] },
+      { title: 'ステップ7：デプロイ', desc: ['RenderやVercelなどのクラウドにホストし、世界中に公開します。'] }
     ]
   }
 };
 
 const CODE_SNIPPETS = [
-  '<h1>Hello World</h1>\n<p>This is HTML</p>',
-  'p {\n  color: #333;\n  font-size: 16px;\n}',
-  'const btn = document.querySelector("#btn");\nbtn.addEventListener("click", () => {\n  alert("Clicked!");\n});',
-  'git init\ngit add .\ngit commit -m "init"\ngit push origin main'
+  '<!-- Structure -->\n<h1>Hello World</h1>\n<p>This is HTML</p>',
+  '/* Style */\nh1 {\n  color: #333;\n  font-size: 24px;\n}',
+  '// Logic\nconst btn = document.querySelector("#btn");\nbtn.addEventListener("click", () => {\n  alert("Clicked!");\n});',
+  '// React Component\nfunction App() {\n  return <h1>Hello React!</h1>;\n}',
+  '// Express API\napp.get("/api/users", (req, res) => {\n  res.json({ name: "Alice" });\n});',
+  '// Next.js Page\nexport default function Home() {\n  return <h1>Welcome to Next.js</h1>;\n}',
+  '# Deploy\n> Push to GitHub\n> Connect to Render / Vercel\n> Done!'
 ];
 
-// DOM Elements
 const slideTitleEl = document.getElementById('slideTitle');
 const slideDescEl = document.getElementById('slideDesc');
 const slideCodeEl = document.getElementById('slideCode');
@@ -164,14 +175,12 @@ const commentCount = document.getElementById('commentCount');
 const formHint = document.getElementById('formHint');
 const charCounter = document.getElementById('charCounter');
 
-// State (Default Language: English)
 let currentLang = 'en'; 
 let currentIndex = 0;
 
 function t() { return CONTENT[currentLang].ui; }
 function slides() { return CONTENT[currentLang].slides; }
 
-// 动态渲染小圆点，防止切语言时数量对不上
 function renderDots() {
   dotsEl.innerHTML = '';
   slides().forEach((_, i) => {
@@ -236,7 +245,6 @@ function formatTime(ts) {
   return new Date(ts).toLocaleDateString(LANGS[currentLang].htmlLang);
 }
 
-// 安全渲染评论区，防止 XSS
 function renderComments() {
   const list = loadComments();
   commentList.innerHTML = '';
@@ -346,7 +354,6 @@ langSelect.addEventListener('change', () => {
   try { localStorage.setItem(LANG_KEY, langSelect.value); } catch(e) {}
 });
 
-// 初始化设置
 try {
   const savedName = localStorage.getItem(NICKNAME_KEY);
   if (savedName) nameInput.value = savedName;
@@ -355,7 +362,6 @@ try {
     currentLang = savedLang;
     langSelect.value = savedLang;
   } else {
-    // 如果没有任何记录，强制设为 en
     currentLang = 'en';
     langSelect.value = 'en';
   }
