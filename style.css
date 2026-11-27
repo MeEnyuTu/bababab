@@ -72,7 +72,7 @@ body {
 
 .progress-bar {
   height: 100%;
-  width: 14.28%; /* 修复了初始宽度的闪烁问题，1/7 */
+  width: 3.33%; /* 1/30 */
   background: var(--primary);
   transition: width 0.4s ease;
   border-radius: 999px;
@@ -105,7 +105,15 @@ pre.code {
 }
 
 .slide-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-color); }
-.dots { display: flex; gap: 8px; }
+
+/* 🛡️ 修复：30 个圆点必须换行，否则会撑破屏幕 */
+.dots { 
+  display: flex; 
+  gap: 6px; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  max-width: 60%; 
+}
 
 .dot {
   width: 8px;
@@ -117,10 +125,10 @@ pre.code {
   transition: var(--transition);
   padding: 0;
 }
-.dot.active { width: 24px; border-radius: 999px; background: var(--primary); }
+.dot.active { width: 20px; border-radius: 999px; background: var(--primary); }
 .dot:hover:not(.active) { background: #9ca3af; }
 
-.btn { font-family: inherit; font-size: 14px; font-weight: 600; border: none; border-radius: var(--radius-md); padding: 10px 24px; cursor: pointer; transition: var(--transition); }
+.btn { font-family: inherit; font-size: 14px; font-weight: 600; border: none; border-radius: var(--radius-md); padding: 10px 24px; cursor: pointer; transition: var(--transition); flex-shrink: 0; }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3); }
