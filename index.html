@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Build a Website Step by Step</title>
+<title>Full-Stack Web Development Masterclass</title>
 <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -20,7 +20,7 @@
 
   <section class="card">
     <div class="slide-top">
-      <span class="badge" id="indexLabel">1 / 7</span>
+      <span class="badge" id="indexLabel">1 / 30</span>
       <div class="progress-track" id="progressTrack">
         <div class="progress-bar" id="progressBar"></div>
       </div>
@@ -74,7 +74,7 @@ const NICKNAME_KEY = 'tutorial-nickname';
 const CONTENT = {
   en: {
     ui: {
-      docTitle: 'Build a Website Step by Step',
+      docTitle: 'Full-Stack Web Development Masterclass',
       prev: '← Prev', next: 'Next →',
       discussTitle: '💬 Discussion',
       namePlaceholder: 'Your nickname',
@@ -87,18 +87,41 @@ const CONTENT = {
       counter: (n, max) => `${n} / ${max}`
     },
     slides: [
-      { title: 'Step 1: Meet HTML', desc: ['HTML defines the structure. It is the skeleton of every webpage.'] },
-      { title: 'Step 2: Write CSS', desc: ['CSS controls the look. It adds colors, fonts, and layout to the structure.'] },
-      { title: 'Step 3: Add JavaScript', desc: ['JS drives behavior. It makes pages interactive and dynamic.'] },
-      { title: 'Step 4: Frontend Frameworks', desc: ['When UIs get complex, frameworks like React or Vue help manage state and components efficiently.'] },
-      { title: 'Step 5: Backend & APIs', desc: ['Websites need data. Backends like Node.js and Express handle logic and return JSON data.'] },
-      { title: 'Step 6: Full-stack Frameworks', desc: ['Next.js blends frontend and backend together, handling routing and server-side rendering out of the box.'] },
-      { title: 'Step 7: Deploy', desc: ['Host your site on the cloud (like Render or Vercel) to let the whole world access it.'] }
+      { title: '1. HTML Basics', desc: ['The skeleton of the web.'] },
+      { title: '2. CSS Basics', desc: ['Styling and layout.'] },
+      { title: '3. JavaScript Basics', desc: ['Logic and interactivity.'] },
+      { title: '4. DOM Manipulation', desc: ['Interacting with HTML elements.'] },
+      { title: '5. ES6+ Features', desc: ['Modern JavaScript syntax.'] },
+      { title: '6. Version Control (Git)', desc: ['Tracking changes and collaboration.'] },
+      { title: '7. Responsive Design', desc: ['Mobile-first layouts with Flexbox/Grid.'] },
+      { title: '8. CSS Frameworks', desc: ['Speeding up UI with Tailwind or Bootstrap.'] },
+      { title: '9. Package Managers', desc: ['Using npm or yarn.'] },
+      { title: '10. Build Tools', desc: ['Bundling with Vite or Webpack.'] },
+      { title: '11. TypeScript', desc: ['Adding static types to JS.'] },
+      { title: '12. React Basics', desc: ['Component-based UI development.'] },
+      { title: '13. React Hooks', desc: ['Managing state and lifecycle.'] },
+      { title: '14. React Router', desc: ['Client-side navigation.'] },
+      { title: '15. State Management', desc: ['Redux or Zustand for complex apps.'] },
+      { title: '16. Node.js & Express', desc: ['Building backend servers with JS.'] },
+      { title: '17. RESTful APIs', desc: ['Designing endpoints for data exchange.'] },
+      { title: '18. Databases (SQL)', desc: ['Relational data with PostgreSQL.'] },
+      { title: '19. Databases (NoSQL)', desc: ['Document storage with MongoDB.'] },
+      { title: '20. ORMs & Prisma', desc: ['Interacting with DBs safely.'] },
+      { title: '21. Authentication', desc: ['Securing APIs with JWT.'] },
+      { title: '22. Next.js Basics', desc: ['Full-stack React framework.'] },
+      { title: '23. Server Components', desc: ['Rendering on the server.'] },
+      { title: '24. API Routes', desc: ['Backend logic inside Next.js.'] },
+      { title: '25. WebSockets', desc: ['Real-time bidirectional communication.'] },
+      { title: '26. Cloud Deployment', desc: ['Hosting on Render or Vercel.'] },
+      { title: '27. CI/CD Pipelines', desc: ['Automating tests and deploys.'] },
+      { title: '28. Performance', desc: ['Optimizing Core Web Vitals.'] },
+      { title: '29. Security', desc: ['XSS, CSRF, and CORS.'] },
+      { title: '30. Final Project', desc: ['Build your portfolio!'] }
     ]
   },
   zh: {
     ui: {
-      docTitle: '手把手教你做一个网站',
+      docTitle: '全栈 Web 开发指南',
       prev: '← 上一页', next: '下一页 →',
       discussTitle: '💬 讨论区',
       namePlaceholder: '你的昵称（最多 20 字）',
@@ -111,18 +134,41 @@ const CONTENT = {
       counter: (n, max) => `${n} / ${max}`
     },
     slides: [
-      { title: '第一步：认识 HTML', desc: ['HTML 定义了网页的骨架。'] },
-      { title: '第二步：写 CSS', desc: ['CSS 负责长相，为骨架添加颜色、字体和布局。'] },
-      { title: '第三步：加 JavaScript', desc: ['JS 负责行为，让页面动起来，响应用户操作。'] },
-      { title: '第四步：前端框架', desc: ['当页面复杂时，React 或 Vue 等前端框架能帮你更好地管理状态和组件。'] },
-      { title: '第五步：后端与接口', desc: ['网页需要数据。Node.js 等后端负责处理逻辑并返回 JSON 接口。'] },
-      { title: '第六步：全栈框架', desc: ['像 Next.js 这样的全栈框架把前后端融合，开箱即用地处理路由和服务端渲染。'] },
-      { title: '第七步：部署上线', desc: ['把代码托管到云端（如 Render 或 Vercel），让全世界都能访问。'] }
+      { title: '1. HTML 基础', desc: ['网页的骨架。'] },
+      { title: '2. CSS 基础', desc: ['网页的长相与排版。'] },
+      { title: '3. JavaScript 基础', desc: ['网页的逻辑与交互。'] },
+      { title: '4. DOM 操作', desc: ['动态控制 HTML 元素。'] },
+      { title: '5. ES6+ 新特性', desc: ['现代 JavaScript 语法。'] },
+      { title: '6. 版本控制 (Git)', desc: ['记录代码变更与团队协作。'] },
+      { title: '7. 响应式设计', desc: ['使用 Flexbox/Grid 适配多端。'] },
+      { title: '8. CSS 框架', desc: ['用 Tailwind 或 Bootstrap 极速开发。'] },
+      { title: '9. 包管理器', desc: ['使用 npm 或 yarn 管理依赖。'] },
+      { title: '10. 构建工具', desc: ['使用 Vite 或 Webpack 打包项目。'] },
+      { title: '11. TypeScript', desc: ['为 JS 添加静态类型检查。'] },
+      { title: '12. React 基础', desc: ['组件化 UI 开发。'] },
+      { title: '13. React Hooks', desc: ['管理状态与生命周期。'] },
+      { title: '14. React 路由', desc: ['单页应用的前端路由。'] },
+      { title: '15. 状态管理', desc: ['Redux 或 Zustand 管理复杂状态。'] },
+      { title: '16. Node.js 与 Express', desc: ['用 JS 写后端服务器。'] },
+      { title: '17. RESTful API', desc: ['设计规范的数据接口。'] },
+      { title: '18. 数据库 (SQL)', desc: ['使用 PostgreSQL 处理关系型数据。'] },
+      { title: '19. 数据库 (NoSQL)', desc: ['使用 MongoDB 处理文档数据。'] },
+      { title: '20. ORM 与 Prisma', desc: ['安全高效地与数据库交互。'] },
+      { title: '21. 身份认证', desc: ['使用 JWT 保护 API 安全。'] },
+      { title: '22. Next.js 基础', desc: ['全栈 React 框架。'] },
+      { title: '23. 服务端组件', desc: ['在服务器端渲染组件。'] },
+      { title: '24. API 路由', desc: ['在 Next.js 中编写后端逻辑。'] },
+      { title: '25. WebSocket', desc: ['实现实时双向通信。'] },
+      { title: '26. 云端部署', desc: ['部署到 Render 或 Vercel。'] },
+      { title: '27. CI/CD 流水线', desc: ['自动化测试与部署。'] },
+      { title: '28. 性能优化', desc: ['优化核心 Web 指标。'] },
+      { title: '29. 网络安全', desc: ['防范 XSS、CSRF 与 CORS 跨域。'] },
+      { title: '30. 最终项目', desc: ['构建属于你的作品集网站！'] }
     ]
   },
   ja: {
     ui: {
-      docTitle: 'ウェブサイト制作',
+      docTitle: 'フルスタックWeb開発ガイド',
       prev: '← 前へ', next: '次へ →',
       discussTitle: '💬 ディスカッション',
       namePlaceholder: 'ニックネーム',
@@ -135,25 +181,71 @@ const CONTENT = {
       counter: (n, max) => `${n} / ${max}`
     },
     slides: [
-      { title: 'ステップ1：HTML', desc: ['HTMLはウェブページの骨格を定義します。'] },
-      { title: 'ステップ2：CSS', desc: ['CSSは見た目を担当し、色やフォント、レイアウトを設定します。'] },
-      { title: 'ステップ3：JavaScript', desc: ['JSは動きを担当し、ページをインタラクティブにします。'] },
-      { title: 'ステップ4：フロントエンドフレームワーク', desc: ['UIが複雑になると、ReactやVueが状態とコンポーネントの管理を助けます。'] },
-      { title: 'ステップ5：バックエンドとAPI', desc: ['Webサイトにはデータが必要です。Node.jsなどがロジックを処理し、JSONを返します。'] },
-      { title: 'ステップ6：フルスタックフレームワーク', desc: ['Next.jsはフロントとバックを統合し、ルーティングとSSRを提供します。'] },
-      { title: 'ステップ7：デプロイ', desc: ['RenderやVercelなどのクラウドにホストし、世界中に公開します。'] }
+      { title: '1. HTMLの基本', desc: ['ウェブの骨格。'] },
+      { title: '2. CSSの基本', desc: ['見た目とレイアウト。'] },
+      { title: '3. JavaScriptの基本', desc: ['ロジックとインタラクティブ性。'] },
+      { title: '4. DOM操作', desc: ['HTML要素の動的制御。'] },
+      { title: '5. ES6+の機能', desc: ['モダンなJavaScript構文。'] },
+      { title: '6. バージョン管理 (Git)', desc: ['変更履歴とチーム開発。'] },
+      { title: '7. レスポンシブデザイン', desc: ['Flexbox/Gridでのマルチデバイス対応。'] },
+      { title: '8. CSSフレームワーク', desc: ['TailwindやBootstrapで高速化。'] },
+      { title: '9. パッケージマネージャー', desc: ['npmやyarnの使用。'] },
+      { title: '10. ビルドツール', desc: ['ViteやWebpackでバンドル。'] },
+      { title: '11. TypeScript', desc: ['JSに静的型付けを追加。'] },
+      { title: '12. Reactの基本', desc: ['コンポーネントベースのUI開発。'] },
+      { title: '13. React Hooks', desc: ['状態とライフサイクルの管理。'] },
+      { title: '14. React Router', desc: ['クライアントサイドのルーティング。'] },
+      { title: '15. 状態管理', desc: ['ReduxやZustandで複雑な状態を管理。'] },
+      { title: '16. Node.jsとExpress', desc: ['JSでバックエンドを構築。'] },
+      { title: '17. RESTful API', desc: ['データ交換のためのAPI設計。'] },
+      { title: '18. データベース (SQL)', desc: ['PostgreSQLによる関係データ。'] },
+      { title: '19. データベース (NoSQL)', desc: ['MongoDBによるドキュメント指向。'] },
+      { title: '20. ORMとPrisma', desc: ['安全なデータベース操作。'] },
+      { title: '21. 認証', desc: ['JWTでAPIを保護。'] },
+      { title: '22. Next.jsの基本', desc: ['フルスタックReactフレームワーク。'] },
+      { title: '23. サーバーコンポーネント', desc: ['サーバーサイドレンダリング。'] },
+      { title: '24. APIルート', desc: ['Next.js内でのバックエンド処理。'] },
+      { title: '25. WebSocket', desc: ['リアルタイム双方向通信。'] },
+      { title: '26. クラウドデプロイ', desc: ['RenderやVercelへのホスティング。'] },
+      { title: '27. CI/CDパイプライン', desc: ['テストとデプロイの自動化。'] },
+      { title: '28. パフォーマンス', desc: ['Core Web Vitalsの最適化。'] },
+      { title: '29. セキュリティ', desc: ['XSS、CSRF、CORS対策。'] },
+      { title: '30. 最終プロジェクト', desc: ['ポートフォリオサイトを構築しよう！'] }
     ]
   }
 };
 
 const CODE_SNIPPETS = [
-  '<!-- Structure -->\n<h1>Hello World</h1>\n<p>This is HTML</p>',
-  '/* Style */\nh1 {\n  color: #333;\n  font-size: 24px;\n}',
-  '// Logic\nconst btn = document.querySelector("#btn");\nbtn.addEventListener("click", () => {\n  alert("Clicked!");\n});',
-  '// React Component\nfunction App() {\n  return <h1>Hello React!</h1>;\n}',
-  '// Express API\napp.get("/api/users", (req, res) => {\n  res.json({ name: "Alice" });\n});',
-  '// Next.js Page\nexport default function Home() {\n  return <h1>Welcome to Next.js</h1>;\n}',
-  '# Deploy\n> Push to GitHub\n> Connect to Render / Vercel\n> Done!'
+  '<!-- 1 -->\n<h1>Hello World</h1>',
+  '/* 2 */\nh1 { color: blue; }',
+  '// 3\nconsole.log("Hello JS");',
+  '// 4\ndocument.querySelector("h1").textContent = "Hi";',
+  '// 5\nconst greet = (name) => `Hello ${name}`;',
+  '# 6\ngit commit -m "first commit"',
+  '/* 7 */\n.container { display: flex; }',
+  '/* 8 */\n<div class="flex p-4 bg-blue-500">Tailwind</div>',
+  '# 9\nnpm install react',
+  '# 10\nnpm create vite@latest',
+  '// 11\nlet age: number = 25;',
+  '// 12\nfunction App() { return <h1>React</h1>; }',
+  '// 13\nconst [count, setCount] = useState(0);',
+  '// 14\n<Route path="/" element={<Home />} />',
+  '// 15\nconst useStore = create((set) => ({ count: 0 }));',
+  '// 16\nconst express = require("express");',
+  '// 17\napp.get("/api", (req, res) => res.json({}));',
+  '// 18\nSELECT * FROM users;',
+  '// 19\ndb.collection("users").find();',
+  '// 20\nawait prisma.user.findMany();',
+  '// 21\nconst token = jwt.sign({ id: 1 }, "secret");',
+  '// 22\nexport default function Page() { return <div />; }',
+  '// 23\nasync function Page() { const data = await getData(); }',
+  '// 24\nexport async function GET() { return Response.json({}); }',
+  '// 25\nconst ws = new WebSocket("ws://localhost:8080");',
+  '# 26\nDeploy to Render or Vercel',
+  '# 27\nname: CI\non: push',
+  '// 28\n<Image src="/hero.jpg" priority />',
+  '// 29\napp.use(cors());',
+  '// 30\n// You are ready to build the web!'
 ];
 
 const slideTitleEl = document.getElementById('slideTitle');
